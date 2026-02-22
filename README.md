@@ -126,6 +126,6 @@ Contact [anthony@fallrisk.ai](mailto:anthony@fallrisk.ai) for pricing, licensing
 
 ---
 
-**Fall Risk AI** | [fallrisk.ai](https://fallrisk.ai) | Patent Application 63/982,893
+**Fall Risk Research** | [fallrisk.ai](https://fallrisk.ai) | Patent Application 63/982,893
 
 *Identity is not emergent. It is structural.*
