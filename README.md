@@ -120,7 +120,7 @@ The full theory, proofs, and validation are published:
 **Free for evaluation and research.**
 Anyone can `pip install`, inspect anchors, cross-compare models, and explore the verification math at no cost.
 
-**Commercial / production use** (enrollment, live verification, continuous monitoring, signed attestations, fleet management, and enterprise support) requires a commercial license from Fall Risk AI.
+**Commercial / production use** (enrollment, live verification, continuous monitoring, signed attestations, fleet management, and enterprise support) requires a commercial license from Fall Risk Research.
 
 Contact [anthony@fallrisk.ai](mailto:anthony@fallrisk.ai) for pricing, licensing, and pilot programs.
 
