@@ -66,7 +66,11 @@ The **measurement engine** (model enrollment and live verification) is available
 
 ## Quick Start with Demo Anchors
 
+<<<<<<< HEAD
 Download pre-enrolled demo anchors from [GitHub Releases](https://github.com/fallrisk-ai/IT-PUF/releases) and explore:
+=======
+Download pre-enrolled demo anchors from [GitHub Releases](https://github.com/fallrisk-ai/IT-PUF/releases/tag/v0.1.0) and explore:
+>>>>>>> f20002b209e61e2bfe351b8b3f31f430c34ab4e1
 
 ```bash
 # See what an enrolled identity looks like
@@ -138,7 +142,7 @@ The full theory, proofs, and validation are published:
 **Free for evaluation and research.**
 Anyone can `pip install`, inspect anchors, cross-compare models, and explore the verification math at no cost.
 
-**Commercial / production use** (enrollment, live verification, continuous monitoring, signed attestations, fleet management, and enterprise support) requires a commercial license from Fall Risk AI.
+**Commercial / production use** (enrollment, live verification, continuous monitoring, signed attestations, fleet management, and enterprise support) requires a commercial license from Fall Risk Research.
 
 Contact [anthony@fallrisk.ai](mailto:anthony@fallrisk.ai) for pricing, licensing, and pilot programs.
 
