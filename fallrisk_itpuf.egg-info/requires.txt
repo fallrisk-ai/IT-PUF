@@ -1,0 +1,9 @@
+numpy>=1.24
+
+[all]
+fallrisk-itpuf[gpu]
+
+[gpu]
+torch>=2.0
+transformers>=4.36
+accelerate>=0.25

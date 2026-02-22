@@ -1,19 +1,47 @@
+Metadata-Version: 2.4
+Name: fallrisk-itpuf
+Version: 0.1.0
+Summary: Biometric identity verification for AI models — challenge-response fingerprinting with cryptographic guarantees.
+Author-email: Anthony Ray Coslett <anthony@fallrisk.ai>
+License-Expression: Apache-2.0
+Project-URL: Homepage, https://fallrisk.ai
+Project-URL: Documentation, https://github.com/fallrisk-ai/itpuf
+Project-URL: Repository, https://github.com/fallrisk-ai/itpuf
+Project-URL: Issues, https://github.com/fallrisk-ai/itpuf/issues
+Project-URL: Paper, https://doi.org/10.5281/zenodo.18719341
+Keywords: ai-safety,model-fingerprinting,model-authentication,puf,llm-security,model-identity,ai-compliance,eu-ai-act
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Security
+Classifier: Topic :: Security :: Cryptography
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.24
+Provides-Extra: gpu
+Requires-Dist: torch>=2.0; extra == "gpu"
+Requires-Dist: transformers>=4.36; extra == "gpu"
+Requires-Dist: accelerate>=0.25; extra == "gpu"
+Provides-Extra: all
+Requires-Dist: fallrisk-itpuf[gpu]; extra == "all"
+Dynamic: license-file
+
 # IT-PUF: Biometric Identity Verification for AI Models
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Patent](https://img.shields.io/badge/Patent-63%2F982%2C893-green.svg)](https://fallrisk.ai)
 [![Coq](https://img.shields.io/badge/Coq-311%2B_theorems%2C_0_Admitted-orange.svg)](https://fallrisk.ai)
-[![PyPI](https://img.shields.io/pypi/v/fallrisk-itpuf)](https://pypi.org/project/fallrisk-itpuf/)
 
 **Know which model is running. Prove it to your auditor.**
 
 IT-PUF (Inference-Time Physical Unclonable Function) is a challenge-response fingerprinting system that creates a unique, unforgeable identity for every neural network — and detects any swap, distillation, or fine-tuning in seconds.
-
-### 7 models. 0 false accepts. 815× minimum separation.
-
-![IT-PUF audit — 7 models, 0/84 FAR](docs/audit_demo.png)
-
-![IT-PUF info — enrolled model identity](docs/info_demo.png)
 
 ## The Problem
 
@@ -28,11 +56,12 @@ pip install fallrisk-itpuf
 itpuf info --anchor Qwen2.5-0.5B-Instruct_anchor.json
 
 # Cross-compare anchors — see the separation for yourself
-itpuf audit --anchors *.json
-# → ✅ FAR: 0/84 | Min separation: 0.0818 (815.9× ε)
+itpuf audit --anchors Qwen2.5-0.5B_anchor.json SmolLM2-1.7B_anchor.json
+# → ✅ FAR: 0/4 | Min separation: 0.1603 (1,598× ε)
+# → These models are COMPLETELY distinguishable.
 ```
 
-Different model? 815× above the acceptance threshold. Same model? Bit-identical. No ambiguity.
+Different model? 1,598× above the acceptance threshold. Same model? Bit-identical. No ambiguity.
 
 ## How It Works
 
@@ -66,27 +95,15 @@ The **measurement engine** (model enrollment and live verification) is available
 
 ## Quick Start with Demo Anchors
 
-Download pre-enrolled demo anchors from [GitHub Releases](https://github.com/fallrisk-ai/IT-PUF/releases) and explore:
+Download pre-enrolled demo anchors from [GitHub Releases](https://github.com/FallRiskAI/IT-PUF/releases) and explore:
 
 ```bash
 # See what an enrolled identity looks like
 itpuf info --anchor Qwen2.5-0.5B-Instruct_anchor.json
 
-# Compare all demo models — observe the separation
-itpuf audit --anchors *.json
+# Compare two different models — observe the separation
+itpuf audit --anchors Qwen2.5-0.5B-Instruct_anchor.json SmolLM2-1.7B-Instruct_anchor.json
 ```
-
-**Demo zoo (v0.1.0):** 7 models, 5 families, 2 architecture types (Transformer + Mamba SSM)
-
-| Model | Family | Architecture |
-|-------|--------|-------------|
-| Qwen2.5-0.5B-Instruct | Qwen | Transformer |
-| SmolLM2-1.7B-Instruct | SmolLM | Transformer |
-| TinyLlama-1.1B-Chat-v1.0 | Llama | Transformer |
-| Llama-3.2-1B-Instruct | Llama | Transformer |
-| Gemma-2-2B-it | Google | Transformer |
-| OPT-1.3B | OPT | Transformer |
-| Falcon-Mamba-7B-Instruct | TII | **Mamba SSM** |
 
 ## Python API
 
@@ -144,6 +161,6 @@ Contact [anthony@fallrisk.ai](mailto:anthony@fallrisk.ai) for pricing, licensing
 
 ---
 
-**Fall Risk Research** | [fallrisk.ai](https://fallrisk.ai) | Patent Application 63/982,893
+**Fall Risk AI** | [fallrisk.ai](https://fallrisk.ai) | Patent Application 63/982,893
 
 *Identity is not emergent. It is structural.*
