@@ -62,15 +62,11 @@ Requires Python ≥ 3.9. The open-source package includes anchor management, cro
 | `itpuf enroll` | Measure a model's identity | Measurement engine |
 | `itpuf verify` | Check a live model against an anchor | Measurement engine |
 
-The **measurement engine** (model enrollment and live verification) is available through a commercial license from Fall Risk AI. This is the same split used by TLS certificate authorities: anyone can *verify* a certificate; you *obtain* one from a trusted provider.
+The **measurement engine** (model enrollment and live verification) is available through a commercial license from Fall Risk Research. This is the same split used by TLS certificate authorities: anyone can *verify* a certificate; you *obtain* one from a trusted provider.
 
 ## Quick Start with Demo Anchors
 
-<<<<<<< HEAD
 Download pre-enrolled demo anchors from [GitHub Releases](https://github.com/fallrisk-ai/IT-PUF/releases) and explore:
-=======
-Download pre-enrolled demo anchors from [GitHub Releases](https://github.com/fallrisk-ai/IT-PUF/releases/tag/v0.1.0) and explore:
->>>>>>> f20002b209e61e2bfe351b8b3f31f430c34ab4e1
 
 ```bash
 # See what an enrolled identity looks like
