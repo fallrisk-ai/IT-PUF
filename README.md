@@ -60,7 +60,7 @@ The **measurement engine** (model enrollment and live verification) is available
 
 ## Quick Start with Demo Anchors
 
-Download pre-enrolled demo anchors from [GitHub Releases](https://github.com/FallRiskAI/IT-PUF/releases) and explore:
+Download pre-enrolled demo anchors from [GitHub Releases](https://github.com/fallrisk-ai/IT-PUF/releases/tag/v0.1.0) and explore:
 
 ```bash
 # See what an enrolled identity looks like
