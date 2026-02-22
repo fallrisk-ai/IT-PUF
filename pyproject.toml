@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fallrisk-itpuf"
-version = "0.1.1"
+version = "0.1.0"
 description = "Biometric identity verification for AI models — challenge-response fingerprinting with cryptographic guarantees."
 readme = "README.md"
 license = "Apache-2.0"
