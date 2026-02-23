@@ -3,11 +3,14 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Patent](https://img.shields.io/badge/Patent-63%2F982%2C893-green.svg)](https://fallrisk.ai)
 [![Coq](https://img.shields.io/badge/Coq-311%2B_theorems%2C_0_Admitted-orange.svg)](https://fallrisk.ai)
+[![Whitepaper](https://img.shields.io/badge/Whitepaper-PDF-red.svg)](https://fallrisk.ai/research/delta-gene-whitepaper.pdf)
 [![PyPI](https://img.shields.io/pypi/v/fallrisk-itpuf)](https://pypi.org/project/fallrisk-itpuf/)
 
 **Know which model is running. Prove it to your auditor.**
 
 IT-PUF (Inference-Time Physical Unclonable Function) is a challenge-response fingerprinting system that creates a unique, unforgeable identity for every neural network — and detects any swap, distillation, or fine-tuning in seconds.
+
+📖 **Read the foundational math:** [The δ-Gene: Inference-Time Physical Unclonable Functions from Architecture-Invariant Output Geometry](https://fallrisk.ai/research/delta-gene-whitepaper.pdf)
 
 ### 7 models. 0 false accepts. 815× minimum separation.
 
@@ -129,7 +132,7 @@ print(f"FAR: {report['n_false_accepts']}/{report['n_pairs']}")
 
 The full theory, proofs, and validation are published:
 
-- **Paper:** "The δ-Gene: Inference-Time Physical Unclonable Functions from Architecture-Invariant Output Geometry"
+- **Paper:** ["The δ-Gene: Inference-Time Physical Unclonable Functions from Architecture-Invariant Output Geometry"](https://fallrisk.ai/research/delta-gene-whitepaper.pdf)
 - **Formal verification:** 311+ Coq theorems, 0 Admitted
 - **Patent:** Application 63/982,893 (February 13, 2026)
 
@@ -144,6 +147,6 @@ Contact [anthony@fallrisk.ai](mailto:anthony@fallrisk.ai) for pricing, licensing
 
 ---
 
-**Fall Risk Research** | [fallrisk.ai](https://fallrisk.ai) | Patent Application 63/982,893
+**Fall Risk AI** | [fallrisk.ai](https://fallrisk.ai) | Patent Application 63/982,893
 
 *Identity is not emergent. It is structural.*
