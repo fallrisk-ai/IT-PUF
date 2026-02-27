@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Patent](https://img.shields.io/badge/Patent-63%2F982%2C893-green.svg)](https://fallrisk.ai)
 [![Coq](https://img.shields.io/badge/Coq-311%2B_theorems%2C_0_Admitted-orange.svg)](https://fallrisk.ai)
-[![Whitepaper](https://img.shields.io/badge/Whitepaper-PDF-red.svg)](https://fallrisk.ai/research/delta-gene-whitepaper.pdf)
+[![Whitepaper](https://img.shields.io/badge/Whitepaper-PDF-red.svg)](https://doi.org/10.5281/zenodo.18704275)
 [![PyPI](https://img.shields.io/pypi/v/fallrisk-itpuf)](https://pypi.org/project/fallrisk-itpuf/)
 
 **Know which model is running. Prove it to your auditor.**
@@ -132,7 +132,7 @@ print(f"FAR: {report['n_false_accepts']}/{report['n_pairs']}")
 
 The full theory, proofs, and validation are published:
 
-- **Paper:** ["The δ-Gene: Inference-Time Physical Unclonable Functions from Architecture-Invariant Output Geometry"](https://fallrisk.ai/research/delta-gene-whitepaper.pdf)
+- **Paper:** ["The δ-Gene: Inference-Time Physical Unclonable Functions from Architecture-Invariant Output Geometry"]((https://doi.org/10.5281/zenodo.18704275))
 - **Formal verification:** 311+ Coq theorems, 0 Admitted
 - **Patent:** Application 63/982,893 (February 13, 2026)
 
